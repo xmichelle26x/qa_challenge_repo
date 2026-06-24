@@ -1,0 +1,7 @@
+QA Challenge – Conclusiones del ejercicio E2E
+
+1. El flujo de compra en Saucedemo se automatizó exitosamente hasta la confirmación "Thank you for your order!".
+2. Se implementó Page Object Model (POM) para mejorar la modularidad y mantenibilidad de los tests.
+3. La estructura del repositorio permite separar pruebas E2E, configuración y documentación de forma clara.
+4. En caso de cambios en la UI, solo se actualizan los Page Objects sin modificar los casos de prueba.
+5. El mensaje esperado no coincide con el mensaje real de la aplicación, la validación correcta es ‘Thank you for your order!’”.

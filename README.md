@@ -23,7 +23,7 @@ cypress/
 │   ├── cartPage.js
 │   └── checkoutPage.js
 ├── support/
-│   └── commands.js
+└──     commands.js
 ```
 
 ### Ejecución
@@ -67,6 +67,7 @@ petstore-karate/
 ├── src/test/java/com/mishell/UserTest.java
 ├── pom.xml
 └── target/karate-reports/karate-summary.html
+```
 
 ### Ejecución
 1. Instalar dependencias con Maven:

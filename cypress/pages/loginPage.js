@@ -8,6 +8,10 @@ class LoginPage {
     cy.get('[data-test="password"]').type(password);
     cy.get('[data-test="login-button"]').click();
   }
+
+  getErrorMessage() {
+    return cy.get('[data-test="error"]');
+  }
 }
 
 export default new LoginPage();

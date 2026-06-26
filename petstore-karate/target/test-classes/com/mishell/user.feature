@@ -35,7 +35,7 @@ Feature: Pruebas de API de usuarios en PetStore
     When method delete
     Then status 404
 
-Scenario: Crear un usuario con datos inválidos
+ Scenario: Crear un usuario con datos inválidos
     Given url 'https://petstore.swagger.io/v2/user'
     And request { "id": 1, "username": "eugenia", "firstName": 123, "lastName": "Angulo", "email": "mishell@test.com", "password": "12345", "phone": "0999999999", "userStatus": 1}
     When method post

@@ -41,3 +41,40 @@ cypress/
    ```bash
    npx cypress run
    ```
+
+## 2. API Testing (PetStore)
+
+- **Framework:** Karate DSL  
+- **API:** [Swagger PetStore](https://petstore.swagger.io/)  
+- **Flujo cubierto (CRUD de usuario):**
+  1. Crear un usuario
+  2. Buscar el usuario creado
+  3. Actualizar nombre y correo
+  4. Buscar el usuario actualizado
+  5. Eliminar el usuario
+
+### Escenarios adicionales (valor agregado)
+- Eliminar usuario inexistente → devuelve `404`  
+- Buscar usuario eliminado → devuelve `404`  
+- Crear usuario con datos inválidos → la API devuelve `200` en lugar de `400`  
+  - Observación: Swagger UI muestra mensajes de validación, pero la API no refleja esos errores en el response.  
+- Crear usuario sin `userStatus` → la API lo acepta y devuelve `200`
+
+### Estructura del proyecto
+```plaintext
+petstore-karate/
+├── src/test/resources/com/mishell/user.feature
+├── src/test/java/com/mishell/UserTest.java
+├── pom.xml
+└── target/karate-reports/karate-summary.html
+
+### Ejecución
+1. Instalar dependencias con Maven:
+   ```bash
+   mvn clean test
+   ```
+
+2. Revisar el reporte HTML generado en:
+   ```bash
+   target/karate-reports/karate-summary.html
+   ```

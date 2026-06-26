@@ -25,4 +25,5 @@ RESULTADO FINAL:
 - Todos los escenarios CRUD fueron validados.
 - El entorno quedó listo para extender pruebas a otros endpoints.
 - En la creación de usuario con datos inválidos, Swagger UI muestra mensajes de validación en pantalla, pero la API PetStore devuelve 200 con un body genérico. Esto evidencia que la validación ocurre en la interfaz, no en el backend.
+- El campo 'userStatus' no es obligatorio en la API PetStore. Se pudo crear un usuario sin enviarlo,
 

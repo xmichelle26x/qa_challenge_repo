@@ -1,0 +1,28 @@
+CONCLUSIONES DEL EJERCICIO DE APIS (PetStore + Karate)
+
+1. Validación de status codes:
+   - Todos los endpoints respondieron con código 200 en operaciones exitosas.
+   - Se confirma que la API cumple con las respuestas esperadas en CRUD básico.
+
+2. Consistencia de datos:
+   - El usuario creado pudo ser consultado correctamente.
+   - Los cambios de nombre y correo se reflejaron en la búsqueda posterior.
+   - Tras la eliminación, el usuario ya no está disponible en la API.
+
+3. Manejo de errores:
+   - La API devuelve 404 si se intenta consultar un usuario inexistente (no incluido en el feature, pero verificado manualmente).
+
+4. Herramientas utilizadas:
+   - Karate simplificó la definición de escenarios en formato Gherkin.
+   - Maven permitió la ejecución automatizada y la generación de reportes.
+
+5. Escenarios negativos:
+   - Eliminar usuario inexistente, la API respondió correctamente con 404.
+   - Crear usuario con datos inválidos, la API respondió con 200 en lugar de 400.
+
+RESULTADO FINAL:
+- Se completó exitosamente el ejercicio de APIs.
+- Todos los escenarios CRUD fueron validados.
+- El entorno quedó listo para extender pruebas a otros endpoints.
+- En la creación de usuario con datos inválidos, Swagger UI muestra mensajes de validación en pantalla, pero la API PetStore devuelve 200 con un body genérico. Esto evidencia que la validación ocurre en la interfaz, no en el backend.
+

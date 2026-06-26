@@ -38,7 +38,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
     </a>
     <div class="nav-count">
-      <div id="nav-pass" class="bg-success">5</div>
+      <div id="nav-pass" class="bg-success">7</div>
       <div id="nav-fail" class="bg-danger">0</div>
     </div>
   </div>
@@ -49,7 +49,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2026-06-26 09:45:29 a. m.</div>
+    <div>2026-06-26 10:22:32 a. m.</div>
   </div>
 </div>
 
@@ -68,6 +68,12 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           </div>
           <div class="nav-item passed">
             <a href="#[5:28]"><span>[5:28]</span> <span>Eliminar el usuario</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[6:33]"><span>[6:33]</span> <span>Eliminar un usuario inexistente</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[7:38]"><span>[7:38]</span> <span>Crear un usuario con datos inválidos</span></a>
           </div>
         </div>
       </div>
@@ -93,7 +99,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>1406</span>
+              <span>ms:</span>&nbsp;<span>1145</span>
             </div>
           </div>
           
@@ -110,7 +116,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>Given</span>&nbsp;<span>url &#39;https://petstore.swagger.io/v2/user&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">87</div>
+    <div class="time-cell passed">66</div>
   </div>
 
    
@@ -135,10 +141,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">5</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request { &quot;id&quot;: 1, &quot;username&quot;: &quot;mishell&quot;, &quot;firstName&quot;: &quot;Mishell&quot;, &quot;lastName&quot;: &quot;Angulo&quot;, &quot;email&quot;: &quot;mishell@test.com&quot;, &quot;password&quot;: &quot;12345&quot;, &quot;phone&quot;: &quot;0999999999&quot; }</span>
+        <span>And</span>&nbsp;<span>request { &quot;id&quot;: 1, &quot;username&quot;: &quot;mishell&quot;, &quot;firstName&quot;: &quot;Mishell&quot;, &quot;lastName&quot;: &quot;Angulo&quot;, &quot;email&quot;: &quot;mishell@test.com&quot;, &quot;password&quot;: &quot;12345&quot;, &quot;phone&quot;: &quot;0999999999&quot;, &quot;userStatus&quot;: 1}</span>
       </div>
     </div>
-    <div class="time-cell passed">51</div>
+    <div class="time-cell passed">45</div>
   </div>
 
    
@@ -166,7 +172,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">1268</div>
+    <div class="time-cell passed">1035</div>
   </div>
 
    
@@ -175,19 +181,19 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.6">09:45:26.730 request:
+  <div class="preformatted" data-parent="0.6">10:22:30.036 request:
 1 &gt; POST https://petstore.swagger.io/v2/user
 1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 138
+1 &gt; Content-Length: 153
 1 &gt; Host: petstore.swagger.io
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17)
 1 &gt; Accept-Encoding: gzip,deflate
-{&quot;id&quot;:1,&quot;username&quot;:&quot;mishell&quot;,&quot;firstName&quot;:&quot;Mishell&quot;,&quot;lastName&quot;:&quot;Angulo&quot;,&quot;email&quot;:&quot;mishell@test.com&quot;,&quot;password&quot;:&quot;12345&quot;,&quot;phone&quot;:&quot;0999999999&quot;}
+{&quot;id&quot;:1,&quot;username&quot;:&quot;mishell&quot;,&quot;firstName&quot;:&quot;Mishell&quot;,&quot;lastName&quot;:&quot;Angulo&quot;,&quot;email&quot;:&quot;mishell@test.com&quot;,&quot;password&quot;:&quot;12345&quot;,&quot;phone&quot;:&quot;0999999999&quot;,&quot;userStatus&quot;:1}
 
-09:45:27.671 response time in milliseconds: 935
+10:22:30.721 response time in milliseconds: 679
 1 &lt; 200
-1 &lt; Date: Fri, 26 Jun 2026 14:45:44 GMT
+1 &lt; Date: Fri, 26 Jun 2026 15:22:47 GMT
 1 &lt; Content-Type: application/json
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
@@ -245,7 +251,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>459</span>
+              <span>ms:</span>&nbsp;<span>378</span>
             </div>
           </div>
           
@@ -290,7 +296,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method get</span>
       </div>
     </div>
-    <div class="time-cell passed">403</div>
+    <div class="time-cell passed">336</div>
   </div>
 
    
@@ -299,7 +305,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.11">09:45:27.699 request:
+  <div class="preformatted" data-parent="0.11">10:22:30.742 request:
 1 &gt; GET https://petstore.swagger.io/v2/user/mishell
 1 &gt; Host: petstore.swagger.io
 1 &gt; Connection: Keep-Alive
@@ -307,9 +313,9 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-09:45:28.098 response time in milliseconds: 398
+10:22:31.071 response time in milliseconds: 327
 1 &lt; 200
-1 &lt; Date: Fri, 26 Jun 2026 14:45:44 GMT
+1 &lt; Date: Fri, 26 Jun 2026 15:22:47 GMT
 1 &lt; Content-Type: application/json
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
@@ -317,7 +323,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
 1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 1 &lt; Server: Jetty(9.2.9.v20150224)
-{&quot;id&quot;:1,&quot;username&quot;:&quot;mishell&quot;,&quot;firstName&quot;:&quot;Mishell&quot;,&quot;lastName&quot;:&quot;Angulo&quot;,&quot;email&quot;:&quot;mishell@test.com&quot;,&quot;password&quot;:&quot;12345&quot;,&quot;phone&quot;:&quot;0999999999&quot;,&quot;userStatus&quot;:0}
+{&quot;id&quot;:1,&quot;username&quot;:&quot;mishell&quot;,&quot;firstName&quot;:&quot;Mishell&quot;,&quot;lastName&quot;:&quot;Angulo&quot;,&quot;email&quot;:&quot;mishell@test.com&quot;,&quot;password&quot;:&quot;12345&quot;,&quot;phone&quot;:&quot;0999999999&quot;,&quot;userStatus&quot;:1}
 
 </div>   
 
@@ -366,7 +372,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>match response.username == &#39;mishell&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">55</div>
+    <div class="time-cell passed">42</div>
   </div>
 
    
@@ -395,7 +401,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>378</span>
+              <span>ms:</span>&nbsp;<span>323</span>
             </div>
           </div>
           
@@ -440,7 +446,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>request { &quot;id&quot;: 1, &quot;username&quot;: &quot;mishell&quot;, &quot;firstName&quot;: &quot;Mishu&quot;, &quot;lastName&quot;: &quot;Angulo&quot;, &quot;email&quot;: &quot;mishu@test.com&quot;, &quot;password&quot;: &quot;12345&quot;, &quot;phone&quot;: &quot;0999999999&quot; }</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -468,7 +474,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method put</span>
       </div>
     </div>
-    <div class="time-cell passed">377</div>
+    <div class="time-cell passed">323</div>
   </div>
 
    
@@ -477,7 +483,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.18">09:45:28.178 request:
+  <div class="preformatted" data-parent="0.18">10:22:31.130 request:
 1 &gt; PUT https://petstore.swagger.io/v2/user/mishell
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 134
@@ -487,9 +493,9 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;id&quot;:1,&quot;username&quot;:&quot;mishell&quot;,&quot;firstName&quot;:&quot;Mishu&quot;,&quot;lastName&quot;:&quot;Angulo&quot;,&quot;email&quot;:&quot;mishu@test.com&quot;,&quot;password&quot;:&quot;12345&quot;,&quot;phone&quot;:&quot;0999999999&quot;}
 
-09:45:28.549 response time in milliseconds: 369
+10:22:31.449 response time in milliseconds: 317
 1 &lt; 200
-1 &lt; Date: Fri, 26 Jun 2026 14:45:45 GMT
+1 &lt; Date: Fri, 26 Jun 2026 15:22:48 GMT
 1 &lt; Content-Type: application/json
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
@@ -547,7 +553,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>427</span>
+              <span>ms:</span>&nbsp;<span>380</span>
             </div>
           </div>
           
@@ -592,7 +598,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method get</span>
       </div>
     </div>
-    <div class="time-cell passed">424</div>
+    <div class="time-cell passed">373</div>
   </div>
 
    
@@ -601,7 +607,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.23">09:45:28.570 request:
+  <div class="preformatted" data-parent="0.23">10:22:31.466 request:
 1 &gt; GET https://petstore.swagger.io/v2/user/mishell
 1 &gt; Host: petstore.swagger.io
 1 &gt; Connection: Keep-Alive
@@ -609,9 +615,9 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-09:45:28.990 response time in milliseconds: 418
+10:22:31.834 response time in milliseconds: 365
 1 &lt; 200
-1 &lt; Date: Fri, 26 Jun 2026 14:45:45 GMT
+1 &lt; Date: Fri, 26 Jun 2026 15:22:48 GMT
 1 &lt; Content-Type: application/json
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
@@ -668,7 +674,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>match response.firstName == &#39;Mishu&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">4</div>
   </div>
 
    
@@ -696,7 +702,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>match response.email == &#39;mishu@test.com&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -725,7 +731,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>361</span>
+              <span>ms:</span>&nbsp;<span>322</span>
             </div>
           </div>
           
@@ -770,7 +776,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method delete</span>
       </div>
     </div>
-    <div class="time-cell passed">361</div>
+    <div class="time-cell passed">322</div>
   </div>
 
    
@@ -779,7 +785,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.30">09:45:29.007 request:
+  <div class="preformatted" data-parent="0.30">10:22:31.862 request:
 1 &gt; DELETE https://petstore.swagger.io/v2/user/mishell
 1 &gt; Host: petstore.swagger.io
 1 &gt; Connection: Keep-Alive
@@ -787,9 +793,9 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-09:45:29.364 response time in milliseconds: 356
+10:22:32.178 response time in milliseconds: 314
 1 &lt; 200
-1 &lt; Date: Fri, 26 Jun 2026 14:45:45 GMT
+1 &lt; Date: Fri, 26 Jun 2026 15:22:48 GMT
 1 &lt; Content-Type: application/json
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
@@ -813,6 +819,279 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   <div class="step-row">
     <div class="step-container" id="0.31">
       <div class="step-ref passed">31</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[6:33]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[6:33]</span>
+                <span class="scenario-name">Eliminar un usuario inexistente</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>320</span>
+            </div>
+          </div>
+          
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.34">
+      <div class="step-ref passed">34</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://petstore.swagger.io/v2/user/mishell2&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.35">
+      <div class="step-ref passed">35</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method delete</span>
+      </div>
+    </div>
+    <div class="time-cell passed">319</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.35">10:22:32.200 request:
+1 &gt; DELETE https://petstore.swagger.io/v2/user/mishell2
+1 &gt; Host: petstore.swagger.io
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+10:22:32.517 response time in milliseconds: 315
+1 &lt; 404
+1 &lt; Date: Fri, 26 Jun 2026 15:22:49 GMT
+1 &lt; Content-Length: 0
+1 &lt; Connection: keep-alive
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 &lt; Server: Jetty(9.2.9.v20150224)
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.36">
+      <div class="step-ref passed">36</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 404</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[7:38]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[7:38]</span>
+                <span class="scenario-name">Crear un usuario con datos inválidos</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>320</span>
+            </div>
+          </div>
+          
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.39">
+      <div class="step-ref passed">39</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://petstore.swagger.io/v2/user&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.40">
+      <div class="step-ref passed">40</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request { &quot;id&quot;: 1, &quot;username&quot;: &quot;eugenia&quot;, &quot;firstName&quot;: 123, &quot;lastName&quot;: &quot;Angulo&quot;, &quot;email&quot;: &quot;mishell@test.com&quot;, &quot;password&quot;: &quot;12345&quot;, &quot;phone&quot;: &quot;0999999999&quot;, &quot;userStatus&quot;: 1}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.41">
+      <div class="step-ref passed">41</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell passed">319</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.41">10:22:32.528 request:
+1 &gt; POST https://petstore.swagger.io/v2/user
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 147
+1 &gt; Host: petstore.swagger.io
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;id&quot;:1,&quot;username&quot;:&quot;eugenia&quot;,&quot;firstName&quot;:123,&quot;lastName&quot;:&quot;Angulo&quot;,&quot;email&quot;:&quot;mishell@test.com&quot;,&quot;password&quot;:&quot;12345&quot;,&quot;phone&quot;:&quot;0999999999&quot;,&quot;userStatus&quot;:1}
+
+10:22:32.845 response time in milliseconds: 316
+1 &lt; 200
+1 &lt; Date: Fri, 26 Jun 2026 15:22:49 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 &lt; Server: Jetty(9.2.9.v20150224)
+{&quot;code&quot;:200,&quot;type&quot;:&quot;unknown&quot;,&quot;message&quot;:&quot;1&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.42">
+      <div class="step-ref passed">42</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>

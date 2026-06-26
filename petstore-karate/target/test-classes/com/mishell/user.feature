@@ -2,7 +2,7 @@ Feature: Pruebas de API de usuarios en PetStore
 
   Scenario: Crear un usuario
     Given url 'https://petstore.swagger.io/v2/user'
-    And request { "id": 1, "username": "mishell", "firstName": "Mishell", "lastName": "Angulo", "email": "mishell@test.com", "password": "12345", "phone": "0999999999" }
+    And request { "id": 1, "username": "mishell", "firstName": "Mishell", "lastName": "Angulo", "email": "mishell@test.com", "password": "12345", "phone": "0999999999", "userStatus": 1}
     When method post
     Then status 200
 
@@ -28,4 +28,15 @@ Feature: Pruebas de API de usuarios en PetStore
   Scenario: Eliminar el usuario
     Given url 'https://petstore.swagger.io/v2/user/mishell'
     When method delete
+    Then status 200
+
+  Scenario: Eliminar un usuario inexistente
+    Given url 'https://petstore.swagger.io/v2/user/mishell2'
+    When method delete
+    Then status 404
+
+Scenario: Crear un usuario con datos inválidos
+    Given url 'https://petstore.swagger.io/v2/user'
+    And request { "id": 1, "username": "eugenia", "firstName": 123, "lastName": "Angulo", "email": "mishell@test.com", "password": "12345", "phone": "0999999999", "userStatus": 1}
+    When method post
     Then status 200
